@@ -20,18 +20,18 @@ export function Services() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-gradient-to-r from-gray-900 to-slate-700 px-4 py-20 text-center text-white">
+      <section className="bg-gradient-to-r from-hero-from to-hero-to px-4 py-20 text-center text-white">
         <div className="mx-auto max-w-3xl">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sky-600">
-            <Zap className="h-7 w-7 text-white" />
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-cta">
+            <Zap className="h-7 w-7 text-on-cta" />
           </div>
           <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl">{t.services.title}</h1>
-          <p className="text-lg text-gray-300">{t.services.subtitle}</p>
+          <p className="text-lg text-hero-muted">{t.services.subtitle}</p>
         </div>
       </section>
 
-      {/* Blue strip */}
-      <div className="bg-sky-600 px-4 py-4 text-center">
+      {/* Brand strip */}
+      <div className="bg-brand px-4 py-4 text-center">
         <p className="font-semibold text-white">{t.hero.strip}</p>
       </div>
 
@@ -44,18 +44,18 @@ export function Services() {
               return (
                 <div
                   key={i}
-                  className="group flex flex-col rounded-2xl border border-gray-100 bg-white p-7 shadow-sm transition hover:shadow-md hover:border-sky-200"
+                  className="group flex flex-col rounded-2xl border border-card-border bg-card p-7 shadow-sm transition hover:shadow-md hover:border-brand/40"
                 >
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-sky-600 transition group-hover:bg-sky-700">
-                    <Icon className="h-7 w-7 text-white" />
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-brand transition group-hover:bg-brand-hover">
+                    <Icon className="h-7 w-7 text-on-brand" />
                   </div>
-                  <h2 className="mb-3 text-lg font-bold text-gray-900">{service.title}</h2>
+                  <h2 className="mb-3 text-lg font-bold text-heading">{service.title}</h2>
                   <p className="mb-6 flex-1 text-sm leading-relaxed text-gray-500">
                     {service.desc}
                   </p>
                   <Link
                     to="/contact"
-                    className="flex items-center gap-1 text-sm font-semibold text-sky-600 transition hover:text-sky-700"
+                    className="flex items-center gap-1 text-sm font-semibold text-brand transition hover:text-brand-hover"
                   >
                     {t.services.cta}
                     <ChevronRight className="h-4 w-4" />
@@ -68,13 +68,13 @@ export function Services() {
       </section>
 
       {/* CTA strip */}
-      <section className="bg-sky-600 px-4 py-16 text-center text-white">
+      <section className="bg-brand px-4 py-16 text-center text-white">
         <div className="mx-auto max-w-2xl">
           <h2 className="mb-4 text-2xl font-extrabold">{t.hero.cta3}</h2>
-          <p className="mb-8 text-sky-100">{t.hero.subtitle}</p>
+          <p className="mb-8 text-accent-muted">{t.hero.subtitle}</p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3.5 font-bold text-sky-600 transition hover:bg-sky-50"
+            className="inline-flex items-center gap-2 rounded-lg bg-section-btn px-8 py-3.5 font-bold text-brand transition hover:bg-section-btn-hover"
           >
             {t.hero.cta1}
             <ChevronRight className="h-4 w-4" />

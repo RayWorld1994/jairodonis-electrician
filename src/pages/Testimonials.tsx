@@ -8,18 +8,18 @@ export function Testimonials() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-gradient-to-r from-gray-900 to-slate-700 px-4 py-20 text-center text-white">
+      <section className="bg-gradient-to-r from-hero-from to-hero-to px-4 py-20 text-center text-white">
         <div className="mx-auto max-w-3xl">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sky-600">
-            <Star className="h-7 w-7 fill-white text-white" />
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-cta">
+            <Star className="h-7 w-7 fill-on-cta text-on-cta" />
           </div>
           <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl">{t.testimonials.title}</h1>
-          <p className="text-lg text-gray-300">{t.testimonials.subtitle}</p>
+          <p className="text-lg text-hero-muted">{t.testimonials.subtitle}</p>
         </div>
       </section>
 
-      {/* Blue strip */}
-      <div className="bg-sky-600 px-4 py-4 text-center">
+      {/* Brand strip */}
+      <div className="bg-brand px-4 py-4 text-center">
         <p className="font-semibold text-white">{t.hero.strip}</p>
       </div>
 
@@ -30,7 +30,7 @@ export function Testimonials() {
             {t.testimonials.items.map((item, i) => (
               <div
                 key={i}
-                className="flex flex-col rounded-2xl border border-gray-100 bg-white p-7 shadow-sm"
+                className="flex flex-col rounded-2xl border border-card-border bg-card p-7 shadow-sm"
               >
                 <div className="mb-4 flex gap-1">
                   {Array.from({ length: item.rating }).map((_, j) => (
@@ -41,11 +41,11 @@ export function Testimonials() {
                   "{item.text}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-600 text-sm font-bold text-white">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand text-sm font-bold text-on-brand">
                     {item.name[0]}
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900">{item.name}</p>
+                    <p className="font-bold text-heading">{item.name}</p>
                     <p className="text-xs text-gray-500">{item.role}</p>
                   </div>
                 </div>
@@ -56,14 +56,14 @@ export function Testimonials() {
       </section>
 
       {/* CTA */}
-      <section className="bg-sky-600 px-4 py-16 text-center text-white">
+      <section className="bg-brand px-4 py-16 text-center text-white">
         <div className="mx-auto max-w-2xl">
-          <Zap className="mx-auto mb-4 h-10 w-10 text-white" />
+          <Zap className="mx-auto mb-4 h-10 w-10 text-accent" />
           <h2 className="mb-4 text-2xl font-extrabold">{t.hero.cta3}</h2>
-          <p className="mb-8 text-sky-100">{t.hero.subtitle}</p>
+          <p className="mb-8 text-accent-muted">{t.hero.subtitle}</p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3.5 font-bold text-sky-600 transition hover:bg-sky-50"
+            className="inline-flex items-center gap-2 rounded-lg bg-section-btn px-8 py-3.5 font-bold text-brand transition hover:bg-section-btn-hover"
           >
             {t.hero.cta1}
             <ChevronRight className="h-4 w-4" />

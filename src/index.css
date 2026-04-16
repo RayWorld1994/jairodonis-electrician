@@ -1,5 +1,90 @@
 @import "tailwindcss";
 
+/* ── Design tokens – Modern theme (default: sky / gray) ── */
+@theme {
+  /* Brand – icon backgrounds, colored section backgrounds */
+  --color-brand:        #0284c7;  /* sky-600  */
+  --color-brand-hover:  #0369a1;  /* sky-700  */
+  --color-on-brand:     #ffffff;
+
+  /* CTA – primary action buttons */
+  --color-cta:          #0284c7;  /* sky-600  */
+  --color-cta-hover:    #0369a1;  /* sky-700  */
+  --color-on-cta:       #ffffff;
+
+  /* Accent – decorative text / icons on dark backgrounds */
+  --color-accent:       #38bdf8;  /* sky-400  */
+  --color-accent-muted: #e0f2fe;  /* sky-100  */
+
+  /* Section headings */
+  --color-heading:      #111827;  /* gray-900 */
+
+  /* Navbar */
+  --color-nav-bg:       #ffffff;
+  --color-nav-link:     #4b5563;  /* gray-600 */
+  --color-nav-active:   #0284c7;  /* sky-600  */
+  --color-nav-text:     #111827;  /* gray-900 */
+  --color-nav-border:   #f3f4f6;  /* gray-100 */
+
+  /* Hero gradient */
+  --color-hero-from:    #111827;  /* gray-900  */
+  --color-hero-via:     #1f2937;  /* gray-800  */
+  --color-hero-to:      #334155;  /* slate-700 */
+  --color-hero-hl:      #38bdf8;  /* sky-400   */
+  --color-hero-muted:   #d1d5db;  /* gray-300  */
+
+  /* Inverse action button – used inside colored (bg-brand) sections */
+  --color-section-btn:       #ffffff;  /* white    */
+  --color-section-btn-hover: #f0f9ff;  /* sky-50   */
+
+  /* Cards (light sections) */
+  --color-card:         #ffffff;
+  --color-card-border:  #f3f4f6;  /* gray-100 */
+
+  /* Footer */
+  --color-footer-bg:     #111827;  /* gray-900 */
+  --color-footer-border: #1f2937;  /* gray-800 */
+  --color-footer-text:   #9ca3af;  /* gray-400 */
+}
+
+/* ── Classic theme (navy / yellow) ── */
+[data-theme="classic"] {
+  --color-brand:        #1e3a8a;  /* blue-900  */
+  --color-brand-hover:  #1e40af;  /* blue-800  */
+  --color-on-brand:     #ffffff;
+
+  --color-cta:          #facc15;  /* yellow-400 */
+  --color-cta-hover:    #fde047;  /* yellow-300 */
+  --color-on-cta:       #1e3a8a;  /* blue-900  */
+
+  --color-accent:       #facc15;  /* yellow-400 */
+  --color-accent-muted: #bfdbfe;  /* blue-200  */
+
+  --color-heading:      #1e3a8a;  /* blue-900  */
+
+  --color-nav-bg:       #1e3a8a;  /* blue-900  */
+  --color-nav-link:     #bfdbfe;  /* blue-200  */
+  --color-nav-active:   #facc15;  /* yellow-400 */
+  --color-nav-text:     #ffffff;
+  --color-nav-border:   #1d4ed8;  /* blue-700  */
+
+  --color-hero-from:    #172554;  /* blue-950  */
+  --color-hero-via:     #1e3a8a;  /* blue-900  */
+  --color-hero-to:      #1e40af;  /* blue-800  */
+  --color-hero-hl:      #facc15;  /* yellow-400 */
+  --color-hero-muted:   #bfdbfe;  /* blue-200  */
+
+  --color-section-btn:       #facc15;  /* yellow-400 */
+  --color-section-btn-hover: #fde047;  /* yellow-300 */
+
+  --color-card:         #eff6ff;  /* blue-50   */
+  --color-card-border:  #dbeafe;  /* blue-100  */
+
+  --color-footer-bg:     #172554;  /* blue-950  */
+  --color-footer-border: #1e40af;  /* blue-800  */
+  --color-footer-text:   #93c5fd;  /* blue-300  */
+}
+
 *,
 *::before,
 *::after {

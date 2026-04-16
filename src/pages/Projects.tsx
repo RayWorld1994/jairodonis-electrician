@@ -31,18 +31,18 @@ export function Projects() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-gradient-to-r from-gray-900 to-slate-700 px-4 py-20 text-center text-white">
+      <section className="bg-gradient-to-r from-hero-from to-hero-to px-4 py-20 text-center text-white">
         <div className="mx-auto max-w-3xl">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sky-600">
-            <Zap className="h-7 w-7 text-white" />
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-cta">
+            <Zap className="h-7 w-7 text-on-cta" />
           </div>
           <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl">{t.projects.title}</h1>
-          <p className="text-lg text-gray-300">{t.projects.subtitle}</p>
+          <p className="text-lg text-hero-muted">{t.projects.subtitle}</p>
         </div>
       </section>
 
-      {/* Blue strip */}
-      <div className="bg-sky-600 px-4 py-4 text-center">
+      {/* Brand strip */}
+      <div className="bg-brand px-4 py-4 text-center">
         <p className="font-semibold text-white">{t.hero.strip}</p>
       </div>
 
@@ -56,20 +56,20 @@ export function Projects() {
               return (
                 <div
                   key={i}
-                  className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm transition hover:shadow-md"
+                  className="overflow-hidden rounded-2xl border border-card-border shadow-sm transition hover:shadow-md"
                 >
                   <div
                     className={`flex h-48 items-center justify-center bg-gradient-to-br ${style.gradient}`}
                   >
                     <Icon className="h-16 w-16 text-white/50" />
                   </div>
-                  <div className="p-6">
+                  <div className="bg-card p-6">
                     <span
                       className={`mb-3 inline-block rounded-full px-3 py-0.5 text-xs font-semibold ${style.badge}`}
                     >
                       {project.category}
                     </span>
-                    <h3 className="mb-2 font-bold text-gray-900">{project.title}</h3>
+                    <h3 className="mb-2 font-bold text-heading">{project.title}</h3>
                     <p className="text-sm leading-relaxed text-gray-500">{project.desc}</p>
                   </div>
                 </div>
