@@ -46,7 +46,7 @@ export function Navbar() {
           {/* Desktop links */}
           <nav className="hidden items-center gap-7 md:flex">
             {links.map((l) => (
-              <NavLink key={l.to} to={l.to} end={l.to === '/'} className={linkClass}>
+              <NavLink key={l.to} to={l.to} end={l.to === '/'} viewTransition className={linkClass}>
                 {l.label}
               </NavLink>
             ))}
@@ -88,6 +88,7 @@ export function Navbar() {
             {/* CTA */}
             <Link
               to="/contact"
+              viewTransition
               className="hidden rounded-lg bg-cta px-4 py-1.5 text-sm font-bold text-on-cta transition hover:bg-cta-hover md:block"
             >
               {t.nav.quote}
@@ -112,6 +113,7 @@ export function Navbar() {
                 key={l.to}
                 to={l.to}
                 end={l.to === '/'}
+                viewTransition
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `block px-2 py-2.5 text-sm font-medium ${
@@ -132,6 +134,7 @@ export function Navbar() {
               </a>
               <Link
                 to="/contact"
+                viewTransition
                 onClick={() => setOpen(false)}
                 className="rounded-lg bg-cta px-4 py-2 text-center text-sm font-bold text-on-cta"
               >

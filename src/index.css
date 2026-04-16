@@ -85,6 +85,55 @@
   --color-footer-text:   #93c5fd;  /* blue-300  */
 }
 
+/* ── View transition timing ── */
+:root {
+  --duration-exit:  150ms;
+  --duration-enter: 210ms;
+  --duration-move:  350ms;
+}
+
+/* Shared keyframes */
+@keyframes vt-fade {
+  from { opacity: 0; filter: blur(2px); }
+  to   { opacity: 1; filter: blur(0);   }
+}
+@keyframes vt-slide-up {
+  from { transform: translateY(10px); }
+  to   { transform: translateY(0);    }
+}
+
+/* Page content: fade + slide up on enter, fade out on exit */
+::view-transition-old(page-content) {
+  animation: var(--duration-exit) ease-in both vt-fade reverse;
+}
+::view-transition-new(page-content) {
+  animation:
+    var(--duration-enter) ease-out var(--duration-exit) both vt-fade,
+    var(--duration-move)  ease-out both vt-slide-up;
+}
+
+/* Keep navbar and footer locked in place — no animation */
+::view-transition-group(site-nav),
+::view-transition-group(site-footer) {
+  animation: none;
+  z-index: 100;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay:    0s !important;
+  }
+}
+
+/* Smooth scrolling for anchor links within the same page */
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {

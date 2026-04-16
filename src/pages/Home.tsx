@@ -41,6 +41,7 @@ export function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
+              viewTransition
               className="flex items-center gap-2 rounded-lg bg-cta px-8 py-3.5 font-bold text-on-cta shadow-lg transition hover:bg-cta-hover"
             >
               {t.hero.cta1}
@@ -65,6 +66,7 @@ export function Home() {
           </p>
           <Link
             to="/contact"
+            viewTransition
             className="shrink-0 rounded-full border-2 border-white px-6 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-brand"
           >
             {t.hero.cta3}
@@ -85,6 +87,7 @@ export function Home() {
               <p className="mb-8 text-gray-500">{t.hero.subtitle}</p>
               <Link
                 to="/services"
+                viewTransition
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-brand px-6 py-2.5 text-sm font-bold text-brand transition hover:bg-card"
               >
                 {t.services.allServices}
@@ -139,6 +142,7 @@ export function Home() {
           <div className="mt-10 text-center">
             <Link
               to="/services"
+              viewTransition
               className="inline-flex items-center gap-2 rounded-lg bg-cta px-8 py-3 font-bold text-on-cta transition hover:bg-cta-hover"
             >
               {t.services.allServices}
@@ -161,6 +165,7 @@ export function Home() {
           <p className="mb-6 text-sm text-accent-muted">{t.projects.subtitle}</p>
           <Link
             to="/projects"
+            viewTransition
             className="rounded-full border-2 border-white px-6 py-2 text-sm font-bold transition hover:bg-white hover:text-brand"
           >
             {t.projects.title}
@@ -206,6 +211,7 @@ export function Home() {
           <div className="mt-10 text-center">
             <Link
               to="/testimonials"
+              viewTransition
               className="inline-flex items-center gap-2 rounded-lg border-2 border-brand px-8 py-3 font-bold text-brand transition hover:bg-card"
             >
               {t.nav.testimonials}
@@ -225,6 +231,7 @@ export function Home() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
+              viewTransition
               className="rounded-lg bg-section-btn px-8 py-3.5 font-bold text-brand transition hover:bg-section-btn-hover"
             >
               {t.hero.cta1}

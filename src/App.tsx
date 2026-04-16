@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
+import { ScrollToTop } from './components/ScrollToTop'
 import { Home } from './pages/Home'
 import { Services } from './pages/Services'
 import { About } from './pages/About'
@@ -23,8 +24,11 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
-      <main className="flex-1">
+      <ScrollToTop />
+      <header style={{ viewTransitionName: 'site-nav' }}>
+        <Navbar />
+      </header>
+      <main className="flex-1" style={{ viewTransitionName: 'page-content' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
@@ -34,7 +38,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <Footer />
+      <footer style={{ viewTransitionName: 'site-footer' }}>
+        <Footer />
+      </footer>
     </div>
   )
 }

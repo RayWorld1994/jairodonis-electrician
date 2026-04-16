@@ -53,6 +53,7 @@ export function About() {
               <p className="mb-8 leading-relaxed text-gray-600">{t.about.story2}</p>
               <Link
                 to="/contact"
+                viewTransition
                 className="inline-flex items-center gap-2 rounded-lg bg-cta px-7 py-3 font-bold text-on-cta transition hover:bg-cta-hover"
               >
                 {t.hero.cta1}

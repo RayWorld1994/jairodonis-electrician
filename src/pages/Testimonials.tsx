@@ -63,6 +63,7 @@ export function Testimonials() {
           <p className="mb-8 text-accent-muted">{t.hero.subtitle}</p>
           <Link
             to="/contact"
+            viewTransition
             className="inline-flex items-center gap-2 rounded-lg bg-section-btn px-8 py-3.5 font-bold text-brand transition hover:bg-section-btn-hover"
           >
             {t.hero.cta1}

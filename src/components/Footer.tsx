@@ -41,6 +41,7 @@ export function Footer() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
+                    viewTransition
                     className="text-sm transition-colors hover:text-accent"
                   >
                     {l.label}
