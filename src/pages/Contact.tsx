@@ -13,7 +13,15 @@ const contactSchema = z.object({
 
 type ContactForm = z.infer<typeof contactSchema>
 
-function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) {
+function Field({
+  label,
+  error,
+  children,
+}: {
+  label: string
+  error?: string
+  children: React.ReactNode
+}) {
   return (
     <div className="flex flex-col gap-1">
       <label className="text-sm font-medium text-gray-700">{label}</label>
@@ -24,7 +32,7 @@ function Field({ label, error, children }: { label: string; error?: string; chil
 }
 
 const inputClass =
-  'rounded-xl border border-gray-300 px-4 py-2.5 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200'
+  'rounded-xl border border-gray-300 px-4 py-2.5 text-sm outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-100'
 
 export function Contact() {
   const t = useT()
@@ -43,15 +51,20 @@ export function Contact() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-gradient-to-br from-blue-950 to-blue-800 px-4 py-20 text-center text-white">
+      <section className="bg-gradient-to-r from-gray-900 to-slate-700 px-4 py-20 text-center text-white">
         <div className="mx-auto max-w-3xl">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-yellow-400">
-            <Zap className="h-7 w-7 text-blue-900" />
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sky-600">
+            <Zap className="h-7 w-7 text-white" />
           </div>
           <h1 className="mb-4 text-4xl font-extrabold sm:text-5xl">{t.contact.title}</h1>
-          <p className="text-lg text-blue-200">{t.contact.subtitle}</p>
+          <p className="text-lg text-gray-300">{t.contact.subtitle}</p>
         </div>
       </section>
+
+      {/* Blue strip */}
+      <div className="bg-sky-600 px-4 py-4 text-center">
+        <p className="font-semibold text-white">{t.hero.strip}</p>
+      </div>
 
       <section className="bg-white px-4 py-20">
         <div className="mx-auto max-w-6xl">
@@ -115,7 +128,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="rounded-xl bg-blue-900 px-6 py-3 font-bold text-white transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="rounded-xl bg-sky-600 px-6 py-3 font-bold text-white transition hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {isSubmitting ? t.contact.form.submitting : t.contact.form.submit}
                   </button>
@@ -124,24 +137,23 @@ export function Contact() {
             </div>
 
             {/* ── Info sidebar ── */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5">
 
-              {/* Quick actions */}
               <a
-                href="tel:+50212345678"
-                className="flex items-center gap-4 rounded-2xl bg-blue-900 p-5 text-white transition hover:bg-blue-800"
+                href="tel:+50378297951"
+                className="flex items-center gap-4 rounded-2xl bg-sky-600 p-5 text-white transition hover:bg-sky-700"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400">
-                  <Phone className="h-6 w-6 text-blue-900" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/20">
+                  <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-blue-300">{t.contact.info.phone}</p>
-                  <p className="font-bold">+502 1234-5678</p>
+                  <p className="text-xs font-medium text-sky-100">{t.contact.info.phone}</p>
+                  <p className="font-bold">+503 7829-7951</p>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/50212345678"
+                href="https://wa.me/50378297951"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-2xl bg-green-600 p-5 text-white transition hover:bg-green-500"
@@ -155,30 +167,28 @@ export function Contact() {
                 </div>
               </a>
 
-              {/* Hours */}
-              <div className="rounded-2xl border border-gray-100 bg-blue-50 p-5">
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
                 <div className="mb-3 flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-blue-900" />
-                  <p className="font-bold text-blue-900">{t.contact.info.hours}</p>
+                  <Clock className="h-5 w-5 text-sky-600" />
+                  <p className="font-bold text-gray-900">{t.contact.info.hours}</p>
                 </div>
-                <p className="text-sm text-gray-700">{t.contact.info.hoursValue}</p>
-                <p className="mt-1 text-sm font-semibold text-yellow-600">
+                <p className="text-sm text-gray-600">{t.contact.info.hoursValue}</p>
+                <p className="mt-1 text-sm font-semibold text-sky-600">
                   {t.contact.info.hoursEmergency}
                 </p>
               </div>
 
-              {/* Address */}
-              <div className="rounded-2xl border border-gray-100 bg-blue-50 p-5">
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5">
                 <div className="mb-3 flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-blue-900" />
-                  <p className="font-bold text-blue-900">{t.contact.info.address}</p>
+                  <MapPin className="h-5 w-5 text-sky-600" />
+                  <p className="font-bold text-gray-900">{t.contact.info.address}</p>
                 </div>
-                <p className="text-sm text-gray-700">{t.contact.info.addressValue}</p>
+                <p className="text-sm text-gray-600">{t.contact.info.addressValue}</p>
               </div>
 
               {/* Map placeholder */}
-              <div className="flex h-44 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 text-blue-400">
-                <div className="text-center">
+              <div className="flex h-44 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 to-sky-200">
+                <div className="text-center text-sky-500">
                   <MapPin className="mx-auto mb-2 h-8 w-8" />
                   <p className="text-sm font-medium">Google Maps</p>
                 </div>

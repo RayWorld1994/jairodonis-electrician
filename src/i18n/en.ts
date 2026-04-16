@@ -9,16 +9,18 @@ export const en: Translations = {
     testimonials: 'Testimonials',
     contact: 'Contact',
     quote: 'Get a Quote',
+    role: 'Electrical Engineer',
   },
   hero: {
-    badge: 'Certified Electrician · 15+ years of experience',
-    titleLine1: 'Professional',
-    titleLine2: 'Electrical Solutions',
+    badge: 'Certified Electrical Engineer · 15+ years of experience',
+    titleLine1: 'Electrician',
+    titleLine2: 'Services',
     subtitle:
       'Electrical installations, repairs and maintenance for homes and businesses. Emergency service available 24/7.',
     cta1: 'Request Service',
     cta2: 'Call Now',
     cta3: 'Free Quote',
+    strip: 'Safety and Service, Always Our Priority',
   },
   trust: {
     title: 'Why choose us?',
@@ -83,9 +85,9 @@ export const en: Translations = {
   },
   about: {
     title: 'About Jairo Donis',
-    subtitle: 'Professional electrician with over 15 years of experience.',
+    subtitle: 'Professional electrical engineer with over 15 years of experience.',
     story1:
-      'Jairo Donis is a certified electrician with more than 15 years of experience in residential, commercial and industrial installations. His commitment to quality, safety and customer satisfaction have made him one of the most trusted electricians in the region.',
+      'Jairo Donis is a certified electrical engineer originally from El Salvador, with more than 15 years of experience in residential, commercial and industrial installations. His commitment to quality, safety and customer satisfaction have made him one of the most trusted professionals in the country.',
     story2:
       'He founded his company with the mission of delivering high-quality electrical services at fair prices, always prioritizing the safety of people and their properties. Every project receives the same level of dedication and professionalism, regardless of its size.',
     stats: [
@@ -97,7 +99,7 @@ export const en: Translations = {
     certs: {
       title: 'Certifications',
       items: [
-        'Class A Certified Electrician',
+        'Certified Electrical Engineer',
         'OSHA 30 Construction',
         'NFPA 70E Electrical Safety',
         'EPA 608 Refrigerants',
@@ -171,13 +173,13 @@ export const en: Translations = {
       {
         name: 'Laura Ramos',
         role: 'Homeowner',
-        text: "The best electrician I've hired. Honest, punctual and every job comes with a guarantee. The solar installation was perfect.",
+        text: "The best electrical engineer I've hired. Honest, punctual and every job comes with a guarantee.",
         rating: 5,
       },
       {
         name: 'Miguel Torres',
         role: 'Store manager',
-        text: 'Upgraded our electrical panel and solved problems other electricians couldn\'t. Very satisfied with the result.',
+        text: "Upgraded our electrical panel and solved problems others couldn't. Very satisfied with the result.",
         rating: 5,
       },
     ],
@@ -189,7 +191,7 @@ export const en: Translations = {
       name: 'Full Name',
       namePlaceholder: 'Your full name',
       phone: 'Phone / WhatsApp',
-      phonePlaceholder: '+502 1234-5678',
+      phonePlaceholder: '+503 7829-7951',
       service: 'Service Type',
       servicePlaceholder: 'Select a service',
       message: 'Message',
@@ -216,7 +218,7 @@ export const en: Translations = {
       hoursValue: 'Mon – Sat: 7:00am – 7:00pm',
       hoursEmergency: 'Emergencies: 24 / 7',
       address: 'Location',
-      addressValue: 'Guatemala, Guatemala City',
+      addressValue: 'El Salvador, San Salvador',
     },
   },
   footer: {

@@ -15,19 +15,19 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-blue-950 px-4 py-14 text-blue-300">
+    <footer className="bg-gray-900 px-4 py-14 text-gray-400">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
           {/* Brand */}
           <div>
             <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-yellow-400">
-                <Zap className="h-5 w-5 text-blue-900" />
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sky-600">
+                <Zap className="h-5 w-5 text-white" />
               </div>
               <div className="leading-tight">
                 <p className="font-extrabold text-white">Jairo Donis</p>
-                <p className="text-xs text-yellow-400">Electricista Profesional</p>
+                <p className="text-xs text-sky-400">{t.nav.role}</p>
               </div>
             </div>
             <p className="text-sm leading-relaxed">{t.footer.tagline}</p>
@@ -41,7 +41,7 @@ export function Footer() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className="text-sm transition-colors hover:text-yellow-400"
+                    className="text-sm transition-colors hover:text-sky-400"
                   >
                     {l.label}
                   </Link>
@@ -55,24 +55,24 @@ export function Footer() {
             <h3 className="mb-4 font-bold text-white">{t.footer.contactUs}</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-yellow-400 shrink-0" />
-                <a href="tel:+50212345678" className="hover:text-yellow-400 transition-colors">
-                  +502 1234-5678
+                <Phone className="h-4 w-4 shrink-0 text-sky-400" />
+                <a href="tel:+50378297951" className="transition-colors hover:text-sky-400">
+                  +503 7829-7951
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <MessageCircle className="h-4 w-4 text-yellow-400 shrink-0" />
+                <MessageCircle className="h-4 w-4 shrink-0 text-sky-400" />
                 <a
-                  href="https://wa.me/50212345678"
+                  href="https://wa.me/50378297951"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-yellow-400 transition-colors"
+                  className="transition-colors hover:text-sky-400"
                 >
                   WhatsApp
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-yellow-400 shrink-0 mt-0.5" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sky-400" />
                 <span>{t.contact.info.addressValue}</span>
               </li>
             </ul>
@@ -83,12 +83,12 @@ export function Footer() {
             <h3 className="mb-4 font-bold text-white">{t.contact.info.hours}</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-yellow-400 shrink-0" />
+                <Clock className="h-4 w-4 shrink-0 text-sky-400" />
                 <span>{t.contact.info.hoursValue}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-yellow-400 shrink-0" />
-                <span className="font-semibold text-yellow-400">
+                <Clock className="h-4 w-4 shrink-0 text-sky-400" />
+                <span className="font-semibold text-sky-400">
                   {t.contact.info.hoursEmergency}
                 </span>
               </li>
@@ -96,7 +96,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-blue-800 pt-6 text-center text-sm">
+        <div className="mt-10 border-t border-gray-800 pt-6 text-center text-sm">
           © {new Date().getFullYear()} Jairo Donis. {t.footer.rights}
         </div>
       </div>

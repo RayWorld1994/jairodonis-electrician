@@ -7,16 +7,18 @@ export const es = {
     testimonials: 'Testimonios',
     contact: 'Contacto',
     quote: 'Cotización',
+    role: 'Ing. Eléctrico',
   },
   hero: {
-    badge: 'Electricista Certificado · +15 años de experiencia',
-    titleLine1: 'Soluciones',
-    titleLine2: 'Eléctricas Profesionales',
+    badge: 'Ing. Eléctrico Certificado · +15 años de experiencia',
+    titleLine1: 'Servicios',
+    titleLine2: 'Eléctricos Profesionales',
     subtitle:
       'Instalaciones, reparaciones y mantenimiento eléctrico para hogares y negocios. Atendemos emergencias 24/7.',
     cta1: 'Solicitar Servicio',
     cta2: 'Llamar Ahora',
     cta3: 'Cotización Gratis',
+    strip: 'Seguridad y Servicio, Siempre Nuestra Prioridad',
   },
   trust: {
     title: '¿Por qué elegirnos?',
@@ -82,9 +84,9 @@ export const es = {
   },
   about: {
     title: 'Sobre Jairo Donis',
-    subtitle: 'Electricista profesional con más de 15 años de experiencia.',
+    subtitle: 'Ingeniero eléctrico profesional con más de 15 años de experiencia.',
     story1:
-      'Jairo Donis es un electricista certificado con más de 15 años de experiencia en instalaciones residenciales, comerciales e industriales. Su compromiso con la calidad, la seguridad y la satisfacción del cliente lo han convertido en uno de los electricistas más confiables de la región.',
+      'Jairo Donis es un ingeniero eléctrico certificado originario de El Salvador, con más de 15 años de experiencia en instalaciones residenciales, comerciales e industriales. Su compromiso con la calidad, la seguridad y la satisfacción del cliente lo han convertido en uno de los profesionales más confiables del país.',
     story2:
       'Fundó su empresa con la misión de brindar servicios eléctricos de alta calidad a precios justos, garantizando siempre la seguridad de las personas y sus propiedades. Cada proyecto es tratado con la misma dedicación y profesionalismo, sin importar su tamaño.',
     stats: [
@@ -96,7 +98,7 @@ export const es = {
     certs: {
       title: 'Certificaciones',
       items: [
-        'Electricista Certificado Clase A',
+        'Ingeniero Eléctrico Certificado',
         'OSHA 30 Construcción',
         'NFPA 70E Seguridad Eléctrica',
         'EPA 608 Refrigerantes',
@@ -170,13 +172,13 @@ export const es = {
       {
         name: 'Laura Ramos',
         role: 'Propietaria de vivienda',
-        text: 'El mejor electricista que he contratado. Honesto, puntual y con garantía de su trabajo. La instalación solar quedó perfecta.',
+        text: 'El mejor ingeniero eléctrico que he contratado. Honesto, puntual y con garantía de su trabajo.',
         rating: 5,
       },
       {
         name: 'Miguel Torres',
         role: 'Gerente de tienda',
-        text: 'Actualizó nuestro tablero eléctrico y resolvió problemas que otros electricistas no pudieron solucionar. Muy satisfecho.',
+        text: 'Actualizó nuestro tablero eléctrico y resolvió problemas que otros no pudieron solucionar. Muy satisfecho.',
         rating: 5,
       },
     ],
@@ -188,7 +190,7 @@ export const es = {
       name: 'Nombre Completo',
       namePlaceholder: 'Tu nombre completo',
       phone: 'Teléfono / WhatsApp',
-      phonePlaceholder: '+502 1234-5678',
+      phonePlaceholder: '+503 7829-7951',
       service: 'Tipo de Servicio',
       servicePlaceholder: 'Selecciona un servicio',
       message: 'Mensaje',
@@ -215,7 +217,7 @@ export const es = {
       hoursValue: 'Lun – Sáb: 7:00am – 7:00pm',
       hoursEmergency: 'Emergencias: 24 / 7',
       address: 'Ubicación',
-      addressValue: 'Guatemala, Ciudad de Guatemala',
+      addressValue: 'El Salvador, San Salvador',
     },
   },
   footer: {
