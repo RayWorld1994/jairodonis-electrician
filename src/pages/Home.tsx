@@ -19,8 +19,8 @@ export function Home() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-hero-from via-hero-via to-hero-to px-4 py-32 text-white">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.04] [background-image:radial-gradient(white_1px,transparent_0)] [background-size:32px_32px]" />
+      <section className="relative overflow-hidden bg-linear-to-r from-hero-from via-hero-via to-hero-to px-4 py-32 text-white">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(white_1px,transparent_0)] bg-size-[32px_32px] opacity-[0.04]" />
 
         <div className="relative mx-auto max-w-4xl text-center">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-cta/20 px-4 py-1.5 text-sm font-medium text-hero-hl ring-1 ring-cta/30">
@@ -110,11 +110,14 @@ export function Home() {
       </section>
 
       {/* ── Services preview ── */}
-      <section className="bg-gray-50 px-4 py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="relative overflow-hidden bg-linear-to-br from-hero-from via-hero-via to-hero-to px-4 py-20">
+        {/* subtle dot pattern overlay */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(white_1px,transparent_0)] bg-size-[28px_28px] opacity-[0.03]" />
+
+        <div className="relative mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-3 text-3xl font-extrabold text-heading">{t.services.title}</h2>
-            <p className="text-gray-500">{t.services.subtitle}</p>
+            <h2 className="mb-3 text-3xl font-extrabold text-white">{t.services.title}</h2>
+            <p className="text-hero-muted">{t.services.subtitle}</p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {t.services.items.slice(0, 4).map((service, i) => {
@@ -122,13 +125,13 @@ export function Home() {
               return (
                 <div
                   key={i}
-                  className="group rounded-2xl bg-card border border-card-border p-7 shadow-sm transition hover:shadow-md"
+                  className="group rounded-2xl bg-white/8 p-7 ring-1 ring-white/10 backdrop-blur-sm transition hover:bg-white/14"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand transition group-hover:bg-brand-hover">
-                    <Icon className="h-6 w-6 text-on-brand" />
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-cta transition group-hover:bg-cta-hover">
+                    <Icon className="h-6 w-6 text-on-cta" />
                   </div>
-                  <h3 className="mb-2 font-bold text-heading">{service.title}</h3>
-                  <p className="text-sm leading-relaxed text-gray-500">{service.desc}</p>
+                  <h3 className="mb-2 font-bold text-white">{service.title}</h3>
+                  <p className="text-sm leading-relaxed text-hero-muted">{service.desc}</p>
                 </div>
               )
             })}
@@ -147,10 +150,10 @@ export function Home() {
 
       {/* ── Projects photo strip ── */}
       <section className="grid grid-cols-1 lg:grid-cols-3">
-        <div className="flex h-56 items-center justify-center bg-gradient-to-br from-gray-700 to-gray-600 lg:h-auto">
+        <div className="flex h-56 items-center justify-center bg-linear-to-br from-gray-700 to-gray-600 lg:h-auto">
           <Zap className="h-16 w-16 text-white/30" />
         </div>
-        <div className="flex h-56 items-center justify-center bg-gradient-to-br from-slate-600 to-slate-500 lg:h-auto">
+        <div className="flex h-56 items-center justify-center bg-linear-to-br from-slate-600 to-slate-500 lg:h-auto">
           <Shield className="h-16 w-16 text-white/30" />
         </div>
         <div className="flex flex-col items-center justify-center bg-brand px-8 py-12 text-center text-white">
